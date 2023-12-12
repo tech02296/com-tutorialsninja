@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Sanity suite" verbose="1" >
+    <groups>
+        <run>
+            <include name="sanity"></include>
+        </run>
+    </groups>
+    <listeners>
+        <listener class-name="com.tutorialsninja.demo.customlisteners.CustomListeners"/>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
+    <test name="Login Test" >
+        <classes>
+            <class name="com.tutorialsninja.demo.testsuit.AccountLoginPageTest"/>
+            <class name="com.tutorialsninja.demo.testsuit.AccountRegisterPageTest"></class>
+            <class name="com.tutorialsninja.demo.testsuit.DesktopPageTest"></class>
+            <class name="com.tutorialsninja.demo.testsuit.LaptopsAndNotebooksPageTest"></class>
+            <class name="com.tutorialsninja.demo.testsuit.TopMenuTest"></class>
+        </classes>
+    </test>
+</suite>
